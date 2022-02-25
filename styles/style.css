@@ -11,16 +11,34 @@ h1 {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
 h2 {
   font-family: 'Roboto Slab', serif;
   font-size: 24px;
   font-weight: bold;
 }
 
+@media only screen and (max-width: 500px) {
+  h2 {
+    font-size: 14px;
+  }
+}
+
 h4 {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: normal;
+}
+
+@media only screen and (max-width: 500px) {
+  h4 {
+    font-size: 12px;
+  }
 }
 
 a {
@@ -52,6 +70,13 @@ button {
 
 button:hover {
   background-color: #f1f1f1;
+}
+
+@media only screen and (max-width: 500px) {
+  button {
+    padding: 5px 15px;
+    font-size: 12px;
+  }
 }
 
 nav {
@@ -94,6 +119,12 @@ nav ul li:hover {
   border-bottom: 3px #7e20fd solid;
 }
 
+@media only screen and (max-width: 500px) {
+  nav {
+    display: none;
+  }
+}
+
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,10 +148,24 @@ nav ul li:hover {
   font-family: 'Lato', sans-serif;
 }
 
+@media only screen and (max-width: 500px) {
+  .home h2 {
+    margin: 16px 0;
+  }
+}
+
 .home .avatar {
   width: 300px;
   height: 320px;
   margin: 32px 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .home .avatar {
+    width: 200px;
+    height: 220px;
+    margin: 16px 0;
+  }
 }
 
 .home .logos {
@@ -151,6 +196,20 @@ nav ul li:hover {
           transform: translateY(-12px);
 }
 
+@media only screen and (max-width: 500px) {
+  .home .logos img {
+    width: 26px;
+    height: 26px;
+    margin: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home .logos {
+    margin: 32px 0 0 0;
+  }
+}
+
 .divider {
   border: 1px #e2e2e2 solid;
 }
@@ -179,6 +238,12 @@ nav ul li:hover {
   text-align: center;
   position: relative;
   margin: 88px 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .about h2 {
+    margin: 32px 0;
+  }
 }
 
 .about .skills {
@@ -215,9 +280,44 @@ nav ul li:hover {
   height: 88px;
 }
 
+@media only screen and (max-width: 500px) {
+  .about .skills .skill img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .about .skills .skill h4 {
   margin-top: 32px;
   color: #7e20fd;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .about .skills .skill h4 {
+    margin-top: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about .skills .skill {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about .skills {
+    bottom: -50px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about {
+    min-height: 160px;
+    padding: 0 16px;
+  }
 }
 
 .projects {
@@ -254,6 +354,29 @@ nav ul li:hover {
   background-color: #6418c7;
 }
 
+@media only screen and (max-width: 500px) {
+  .projects .buttons button {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 32px 0 14px 0;
+  }
+}
+
 .projects .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,13 +410,35 @@ nav ul li:hover {
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.6);
-          box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.5);
+          box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 500px) {
+  .projects .cards .card img {
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
+    -webkit-box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.2);
+            box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .projects .cards .card h4 {
   margin-top: 16px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+  .projects .cards .card {
+    margin: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects {
+    margin: 120px 0 40px 0;
+  }
 }
 
 .work {
@@ -335,6 +480,12 @@ nav ul li:hover {
   color: #3b3b3b;
 }
 
+@media only screen and (max-width: 500px) {
+  .work .content {
+    width: 280px;
+  }
+}
+
 .work .timeline {
   margin: 80px 0;
 }
@@ -347,6 +498,12 @@ nav ul li:hover {
   border: 1px solid #7e20fd;
 }
 
+@media only screen and (max-width: 500px) {
+  .work .timeline .line {
+    height: 100px;
+  }
+}
+
 .work .timeline .line .circle {
   position: absolute;
   width: 14px;
@@ -355,6 +512,28 @@ nav ul li:hover {
   right: -7px;
   border-radius: 7px;
   background-color: #7e20fd;
+}
+
+@media only screen and (max-width: 500px) {
+  .work .timeline .line .circle {
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+    right: -3.5px;
+    bottom: 46px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .work .timeline {
+    margin: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .work {
+    margin: 56px 0;
+  }
 }
 
 footer {
@@ -404,12 +583,45 @@ footer .socialicons .icon img {
   height: 32px;
 }
 
+@media only screen and (max-width: 500px) {
+  footer .socialicons .icon img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 footer .socialicons .icon:hover {
   background-color: #f1f1f1;
+}
+
+@media only screen and (max-width: 500px) {
+  footer .socialicons .icon {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  footer .socialicons {
+    top: -20px;
+    border-radius: 10px;
+  }
 }
 
 footer h4 {
   margin-top: 40px;
   color: #fff;
+}
+
+@media only screen and (max-width: 500px) {
+  footer h4 {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  footer {
+    padding: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
