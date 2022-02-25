@@ -1,0 +1,283 @@
+$primary-color: #7e20fd;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+h2 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+h4 {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+ul {
+	list-style-type: none;
+}
+
+button {
+	border: none;
+	padding: 10px 30px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 1px solid #e2e2e2;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	&:hover {
+		background-color: #f1f1f1;
+	}
+}
+
+@mixin flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// navbar
+nav {
+	height: 88px;
+	padding: 40px;
+	display: flex;
+	align-items: baseline;
+	h2 {
+		font-size: 32px;
+		font-family: 'Redressed', cursive;
+		color: $primary-color;
+		cursor: pointer;
+	}
+	ul {
+		display: flex;
+		margin-left: auto;
+		width: fit-content;
+		li {
+			margin: 0 30px;
+			padding: 8px 2px;
+			font-family: 'Lato', sans-serif;
+			font-size: 16px;
+			cursor: pointer;
+			&:hover {
+				border-bottom: 3px $primary-color solid;
+			}
+		}
+	}
+}
+
+// home
+.home {
+	@include flex;
+	padding: 64px 0;
+	flex-direction: column;
+	h2 {
+		margin: 32px 0;
+		font-weight: normal;
+		font-family: 'Lato', sans-serif;
+	}
+	.avatar {
+		width: 300px;
+		height: 320px;
+		margin: 32px 0;
+	}
+	.logos {
+		margin: 80px 0 0 0;
+		@include flex;
+		flex-wrap: wrap;
+		img {
+			width: 56px;
+			height: 56px;
+			margin: 24px 24px 0 24px;
+			transition: 0.2s ease-in;
+			&:hover {
+				transform: translateY(-12px);
+			}
+		}
+	}
+}
+
+.divider {
+	border: 1px #e2e2e2 solid;
+}
+
+// about
+.about {
+	@include flex;
+	background-color: $primary-color;
+	min-height: 400px;
+	position: relative;
+	align-items: flex-start;
+	h2 {
+		color: #fff;
+		width: 600px;
+		text-align: center;
+		position: relative;
+		margin: 88px 0;
+	}
+
+	.skills {
+		position: absolute;
+		background-color: #fff;
+		display: flex;
+		border: 1px #e2e2e2 solid;
+		border-radius: 20px;
+		bottom: -150px;
+		.skill {
+			width: 300px;
+			height: 300px;
+			@include flex;
+			flex-direction: column;
+			img {
+				width: 88px;
+				height: 88px;
+			}
+			h4 {
+				margin-top: 32px;
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+// projects
+.projects {
+	@include flex;
+	flex-direction: column;
+	margin: 300px 0 120px 0;
+	.buttons {
+		margin: 64px 0;
+		button {
+			margin: 0 24px;
+			&.active {
+				background-color: $primary-color;
+				color: #fff;
+				&:hover {
+					background-color: #6418c7;
+				}
+			}
+		}
+	}
+	.cards {
+		@include flex;
+		width: 80%;
+		flex-wrap: wrap;
+		.card {
+			margin: 32px;
+			text-align: center;
+			transition: 0.2s ease-in;
+			&:hover {
+				transform: scale(1.02);
+			}
+			img {
+				width: 320px;
+				height: 240px;
+				border-radius: 20px;
+				object-fit: cover;
+				box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.6);
+			}
+			h4 {
+				margin-top: 16px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+// work
+.work {
+	@include flex;
+	margin: 120px 0;
+	flex-direction: column;
+
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 400px;
+		.position {
+			font-weight: bold;
+			margin-bottom: 16px;
+		}
+		.company {
+			color: #3b3b3b;
+		}
+	}
+
+	.timeline {
+		margin: 80px 0;
+		.line {
+			position: relative;
+			width: 0px;
+			height: 164px;
+			bottom: 0;
+			border: 1px solid $primary-color;
+
+			.circle {
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				bottom: 73px;
+				right: -7px;
+				border-radius: 7px;
+				background-color: $primary-color;
+			}
+		}
+	}
+}
+
+footer {
+	@include flex;
+	padding: 40px;
+	background-color: $primary-color;
+	position: relative;
+	.socialicons {
+		position: absolute;
+		top: -40px;
+		display: flex;
+		background-color: #fff;
+		border-radius: 20px;
+		border: 1px #e2e2e2 solid;
+		overflow: hidden;
+		.icon {
+			@include flex;
+			width: 120px;
+			height: 80px;
+			cursor: pointer;
+			img {
+				width: 32px;
+				height: 32px;
+			}
+			&:hover {
+				background-color: #f1f1f1;
+			}
+		}
+	}
+	h4 {
+		margin-top: 40px;
+		color: #fff;
+	}
+}
