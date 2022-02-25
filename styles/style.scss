@@ -41,6 +41,7 @@ h4 {
 
 a {
 	text-decoration: none;
+	color: #000;
 }
 
 img {
@@ -82,10 +83,13 @@ button {
 
 // navbar
 nav {
+	background-color: #fff;
+	z-index: 10;
+	width: 100%;
 	height: 88px;
-	padding: 40px;
+	padding: 40px 80px;
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	h2 {
 		font-size: 32px;
 		font-family: 'Redressed', cursive;
@@ -102,6 +106,7 @@ nav {
 			font-family: 'Lato', sans-serif;
 			font-size: 16px;
 			cursor: pointer;
+			border-bottom: 3px transparent solid;
 			&:hover {
 				border-bottom: 3px $primary-color solid;
 			}
@@ -113,7 +118,7 @@ nav {
 }
 
 // home
-.home {
+#home {
 	@include flex;
 	padding: 64px 0;
 	flex-direction: column;
@@ -231,7 +236,7 @@ nav {
 }
 
 // projects
-.projects {
+#projects {
 	@include flex;
 	flex-direction: column;
 	margin: 300px 0 120px 0;
@@ -263,21 +268,20 @@ nav {
 		.card {
 			margin: 32px;
 			text-align: center;
-			transition: 0.2s ease-in;
-			&:hover {
-				transform: scale(1.02);
-			}
 			img {
 				width: 320px;
 				height: 240px;
 				border-radius: 20px;
-				object-fit: cover;
-				box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.5);
+				object-fit: contain;
+				transition: 0.2s ease-in;
+				cursor: pointer;
+				&:hover {
+					transform: scale(1.02);
+				}
 				@include phone {
 					width: 280px;
 					height: 200px;
 					border-radius: 10px;
-					box-shadow: -1px 10px 20px -18px rgba(0, 0, 0, 0.2);
 				}
 			}
 			h4 {
@@ -298,7 +302,7 @@ nav {
 }
 
 // work
-.work {
+#work {
 	@include flex;
 	margin: 120px 0;
 	flex-direction: column;
@@ -377,20 +381,20 @@ footer {
 				width: 32px;
 				height: 32px;
 				@include phone {
-					width: 16px;
-					height: 16px;
+					width: 12px;
+					height: 12px;
 				}
 			}
 			&:hover {
 				background-color: #f1f1f1;
 			}
 			@include phone {
-				width: 60px;
-				height: 40px;
+				width: 50px;
+				height: 30px;
 			}
 		}
 		@include phone {
-			top: -20px;
+			top: -15px;
 			border-radius: 10px;
 		}
 	}
@@ -398,7 +402,7 @@ footer {
 		margin-top: 40px;
 		color: #fff;
 		@include phone {
-			margin-top: 20px;
+			margin-top: 15px;
 		}
 	}
 	@include phone {

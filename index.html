@@ -12,20 +12,22 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Rituraj Ranjan</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="container">
         <nav>
-            <h2>RITURAJ</h2>
+            <a href="/">
+                <h2>RITURAJ</h2>
+            </a>
             <ul>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>Work</li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#work">Work</a></li>
             </ul>
         </nav>
         <main>
-            <section class="home">
+            <section id="home">
                 <h1>Hello, I'm Rituraj Ranjan</h1>
                 <h2>I'm an aspiring software engineer</h2>
                 <img class="avatar" src="./assets/avatar.png" alt="avatar">
@@ -61,39 +63,50 @@
                     </div>
                 </div>
             </section>
-            <section class="projects">
+            <section id="projects">
                 <h2>My Project Portfolio</h2>
                 <div class="buttons">
-                    <button class="active">Featured</button>
-                    <button>Web App</button>
-                    <button>Mobile App</button>
-                    <button>UI/UX</button>
+                    <button id="featured" class="active">Featured</button>
+                    <button id="webapp">Web App</button>
+                    <button id="mobileapp">Mobile App</button>
+                    <button id="ui">UI/UX</button>
                 </div>
                 <div class="cards">
                     <div class="card">
-                        <img src="./assets/the-shoe-store.png" alt="">
+                        <a href="https://the-shoe-store.netlify.app/" target="_blank">
+                            <img src="./assets/the-shoe-store.png" alt="">
+                        </a>
                         <h4>The Shoe Store</h4>
                     </div>
                     <div class="card">
-                        <img src="./assets/the-shoe-store.png" alt="">
-                        <h4>The Shoe Store</h4>
+                        <a href="https://play.google.com/store/apps/details?id=com.the_productivity_app"
+                            target="_blank">
+                            <img src="./assets/be-a-pro.png" alt="">
+                        </a>
+                        <h4>Be a Pro</h4>
                     </div>
                     <div class="card">
-                        <img src="./assets/the-shoe-store.png" alt="">
-                        <h4>The Shoe Store</h4>
+                        <a href="https://stee1ix.github.io/take-a-quiz/" target="_blank">
+                            <img src="./assets/take-a-quiz.png" alt="">
+                        </a>
+                        <h4>Take a Quiz</h4>
                     </div>
                     <div class="card">
-                        <img src="./assets/the-shoe-store.png" alt="">
-                        <h4>The Shoe Store</h4>
+                        <a href="https://dribbble.com/shots/17431334-Game-Shop-Mobile-UI" target="_blank">
+                            <img src="./assets/game-shop-ui.png" alt="">
+                        </a>
+                        <h4>Game Store UI</h4>
                     </div>
                     <div class="card">
-                        <img src="./assets/the-shoe-store.png" alt="">
-                        <h4>The Shoe Store</h4>
+                        <a href="https://dribbble.com/shots/17431363-Picture-Sharing-Mobile-UI" target="_blank">
+                            <img src="./assets/picsplash-ui.png" alt="">
+                        </a>
+                        <h4>Picsplash UI</h4>
                     </div>
                 </div>
             </section>
             <div class="divider"></div>
-            <section class="work">
+            <section id="work">
                 <h2>My Work Experience</h2>
                 <div class="content">
                     <h4 class="year">2021</h4>
@@ -110,26 +123,36 @@
             </section>
             <footer>
                 <div class="socialicons">
-                    <div class="icon">
-                        <img src="./assets/icons/github.png" alt="">
-                    </div>
+                    <a href="https://github.com/stee1ix" target="_blank" class="icon">
+                        <img src="./assets/icons/github.png" alt="github">
+                    </a>
                     <div class="divider"></div>
-                    <div class="icon">
-                        <img src="./assets/icons/instagram.png" alt="">
-                    </div>
+                    <a href="https://www.instagram.com/elastico42/" target="_blank" class="icon">
+                        <img src="./assets/icons/instagram.png" alt="instagram">
+                    </a>
                     <div class="divider"></div>
-                    <div class="icon">
-                        <img src="./assets/icons/linkedin.png" alt="">
-                    </div>
+                    <a href="https://www.linkedin.com/in/riturajranjan/" target="_blank" class="icon">
+                        <img src="./assets/icons/linkedin.png" alt="linkedin">
+                    </a>
                     <div class="divider"></div>
-                    <div class="icon">
-                        <img src="./assets/icons/twitter.png" alt="">
-                    </div>
+                    <a href="https://twitter.com/imriturajranjan" target="_blank" class="icon">
+                        <img src="./assets/icons/twitter.png" alt="twitter">
+                    </a>
+                    <div class="divider"></div>
+                    <a href="https://dribbble.com/stee1ix" target="_blank" class="icon">
+                        <img src="./assets/icons/dribbble.png" alt="dribbble">
+                    </a>
+                    <div class="divider"></div>
+                    <a href="https://medium.com/@stee1ix" target="_blank" class="icon">
+                        <img src="./assets/icons/medium.png" alt="medium">
+                    </a>
                 </div>
                 <h4>Made with &hearts; by Rituraj Ranjan</h4>
             </footer>
         </main>
     </div>
+
+    <script src="./main.js"></script>
 </body>
 
 </html>
